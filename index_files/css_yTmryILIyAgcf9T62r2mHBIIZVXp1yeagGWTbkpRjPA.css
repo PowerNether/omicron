@@ -712,9 +712,51 @@ body {
     visibility: visible;
 }
 
+#block-webform .form-reset__icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    background: url('./../image/x-circle-fill.svg') center / contain no-repeat;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#block-webform input:focus ~ .form-reset__icon {
+    opacity: 1;
+    visibility: visible;
+}
+
+#block-webform input:not(:placeholder-shown) {
+    background: #F7F6FB;
+    border: 1px solid #ACA3D9;
+    padding-top: 12px;
+}
+
+#block-webform input:not(:placeholder-shown) ~ label {
+    opacity: 1;
+    visibility: visible;
+}
+
+#block-webform input:not(:placeholder-shown) ~ .form-reset__icon {
+    opacity: 1;
+    visibility: visible;
+}
+
 #block-webform textarea {
     padding: 14px 12px;
     border-radius: 4px;
+    height: 64px;
+}
+
+#block-webform textarea:focus {
+    background: #F7F6FB;
+    border: 1px solid #ACA3D9;
+    outline: none;
 }
 
 #block-webform .js-form-item {
@@ -770,10 +812,26 @@ body {
     padding: 0 12px 0 12px;
 }
 
+#block-webform #edit-data-i-vremya .form-item input:not(:placeholder-shown) {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 0 12px 0 12px;
+}
+
+#block-webform #edit-data-i-vremya .form-item input:not(:placeholder-shown) ~ label {
+    opacity: 0;
+    visibility: hidden;
+}
+
 #block-webform #edit-data-i-vremya .form-item input:focus {
     background: #F7F6FB;
     border: 1px solid #ACA3D9;
     padding-top: 12px;
+}
+
+#block-webform #edit-data-i-vremya .form-item input:focus  ~ label {
+    opacity: 1;
+    visibility: visible;
 }
 
 #block-webform #edit-data-i-vremya .form-item:first-of-type input {
