@@ -759,6 +759,12 @@ body {
     outline: none;
 }
 
+#block-webform textarea:not(:placeholder-shown) {
+    background: #F7F6FB;
+    border: 1px solid #ACA3D9;
+}
+
+
 #block-webform .js-form-item {
     position: relative;
 }
