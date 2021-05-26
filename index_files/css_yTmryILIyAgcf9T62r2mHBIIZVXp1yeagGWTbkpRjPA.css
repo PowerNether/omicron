@@ -704,9 +704,11 @@ body {
     font-size: 11px;
     line-height: 11px;
     color: #808080;
+    opacity: 0;
 }
 
 #block-webform input:focus ~ label {
+    opacity: 1;
     visibility: visible;
 }
 
@@ -766,6 +768,12 @@ body {
 
 #block-webform #edit-data-i-vremya .form-item input {
     padding: 0 12px 0 12px;
+}
+
+#block-webform #edit-data-i-vremya .form-item input:focus {
+    background: #F7F6FB;
+    border: 1px solid #ACA3D9;
+    padding-top: 12px;
 }
 
 #block-webform #edit-data-i-vremya .form-item:first-of-type input {
